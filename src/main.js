@@ -41,7 +41,7 @@ refs.form.addEventListener('submit', e => {
     getImages(userQuery)
       .then(images => {
         console.log(images);
-        if (!images.hits.length|| !images.hits) {
+        if (!images.hits.length || !images.hits) {
           throw new Error('Error! Nothing to load');
         }
         renderGallery(images, refs.gallery);
@@ -59,9 +59,9 @@ refs.form.addEventListener('submit', e => {
           close: false,
           displayMode: 1,
         });
-      })
+      });
+    e.target.reset();
   }, 2000);
-
 
 
 });
